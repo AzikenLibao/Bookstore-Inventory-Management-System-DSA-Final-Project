@@ -55,16 +55,20 @@ Here are screenshots demonstrating the flow and functionality of the application
 
 ### 3. Displaying All Books (Unsorted)
 *(A screenshot showing the list of books before sorting)*
-![Display Unsorted](screenshots/display_unsorted.png)
+<img width="1328" height="682" alt="image" src="https://github.com/user-attachments/assets/a6c4d5dc-4424-4437-a6cb-2bbd213e5c1d" />
+
 
 ### 4. Sorting and Displaying Books
 *(A screenshot showing the message after sorting and the newly sorted list)*
-![Sorting and Displaying](screenshots/sorting_and_displaying.png)
+<img width="2788" height="1404" alt="image" src="https://github.com/user-attachments/assets/6898f02f-8187-4629-9a44-546c0dcbe86e" />
+
 
 ### 5. Searching for a Book
 *(A screenshot of the output when searching for a book that exists)*
-![Search Found](screenshots/search_found.png)
+<img width="2780" height="1138" alt="image" src="https://github.com/user-attachments/assets/1c5df096-e3a5-43b4-9cde-eb186c9ff509" />
+
 
 ### 6. Managing Customer Orders with the Queue
 *(A screenshot showing a book being added to the order queue and then processed)*
-![Queue Operations](screenshots/queue_operations.png)
+<img width="2866" height="1382" alt="image" src="https://github.com/user-attachments/assets/65d479b2-58b4-4220-84d6-9573b89355cf" />
+
