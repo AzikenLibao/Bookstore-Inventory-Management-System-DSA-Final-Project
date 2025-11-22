@@ -16,20 +16,20 @@ public class Inventory {
     }
 
 
-    public void addBook(Scanner scanner) {
+    public void addBook(Scanner sc) {
         System.out.print("Enter book title: ");
-        String title = scanner.nextLine();
+        String title = sc.nextLine();
         System.out.print("Enter book author: ");
-        String author = scanner.nextLine();
+        String author = sc.nextLine();
         System.out.print("Enter book ISBN: ");
-        String isbn = scanner.nextLine();
+        String isbn = sc.nextLine();
 
         double price = -1;
         while (price < 0) {
             try {
                 System.out.print("Enter book price: ");
                 // Use nextLine and parse to handle the entire line
-                price = Double.parseDouble(scanner.nextLine());
+                price = Double.parseDouble(sc.nextLine());
                 if (price < 0) {
                     System.out.println("Price cannot be negative. Please try again.");
                 }
@@ -82,9 +82,9 @@ public class Inventory {
     }
 
 
-    public void searchBookByTitle(Scanner scanner) {
+    public void searchBookByTitle(Scanner sc) {
         System.out.print("Enter the title of the book to search for: ");
-        String searchTitle = scanner.nextLine().trim();
+        String searchTitle = sc.nextLine().trim();
 
         // Linear search: Check every element in the list one by one
         for (Book book : bookInventory) {
@@ -99,9 +99,9 @@ public class Inventory {
     }
 
 
-    public void addOrderToQueue(Scanner scanner) {
+    public void addOrderToQueue(Scanner sc) {
         System.out.print("Enter the title of the book to order: ");
-        String orderTitle = scanner.nextLine().trim();
+        String orderTitle = sc.nextLine().trim();
 
 
         orderQueue.add(orderTitle);
@@ -124,7 +124,7 @@ public class Inventory {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Inventory system = new Inventory();
         boolean running = true;
 
@@ -142,14 +142,14 @@ public class Inventory {
             System.out.print("Enter your choice: ");
 
             // Input validation for the choice
-            if (scanner.hasNextInt()) {
-                int choice = scanner.nextInt();
+            if (sc.hasNextInt()) {
+                int choice = sc.nextInt();
                 // Consume the rest of the line to prevent issues with nextLine() later
-                scanner.nextLine();
+                sc.nextLine();
 
                 switch (choice) {
                     case 1:
-                        system.addBook(scanner);
+                        system.addBook(sc);
                         break;
                     case 2:
                         system.displayAllBooks();
@@ -158,10 +158,10 @@ public class Inventory {
                         system.sortBooksByTitle();
                         break;
                     case 4:
-                        system.searchBookByTitle(scanner);
+                        system.searchBookByTitle(sc);
                         break;
                     case 5:
-                        system.addOrderToQueue(scanner);
+                        system.addOrderToQueue(sc);
                         break;
                     case 6:
                         system.processNextOrder();
@@ -176,9 +176,9 @@ public class Inventory {
             } else {
                 System.out.println("Invalid input. Please enter a number.");
                 // Consume the invalid input to avoid an infinite loop
-                scanner.nextLine();
+                sc.nextLine();
             }
         }
-        scanner.close();
+        sc.close();
     }
 }
